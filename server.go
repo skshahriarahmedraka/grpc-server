@@ -1,4 +1,4 @@
-package main
+package server
 
 import (
 	"context"
@@ -25,7 +25,7 @@ func (s *server) Speaking(ctx context.Context, in *messagepb.SpeakRequest)(*mess
 }
 
 
-func main(){
+func Server(){
 
 	lis ,err := net.Listen("tcp",":50051")
 	logs.Error("Error in listening",err)
